@@ -5,6 +5,7 @@ html,body {
   padding: 0;
   margin: 0;
   -webkit-text-size-adjust: none;
+  font-family: Noto Sans KR;
 }
 
 a {
@@ -47,7 +48,7 @@ h6 {
 *,
 *:before,
 *:after {
-  font-family: Pretendard;
+  font-family: Noto Sans KR;
   box-sizing: border-box;
 }
 
@@ -64,4 +65,5 @@ button {
   padding: 0;
   border: none;
   cursor: pointer;
+  font-family: Noto Sans KR;
 }
