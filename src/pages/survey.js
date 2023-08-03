@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Survey1 from "@/components/pages/survey/Survey1";
 import Survey2 from "@/components/pages/survey/Survey2";
 import Survey3 from "@/components/pages/survey/Survey3";
