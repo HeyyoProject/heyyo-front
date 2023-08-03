@@ -1,36 +1,28 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper/modules";
 
-import { useRouter } from "next/router";
+export default function Survey5({handleNextPage, selectedButton}) {
 
-export default function Survey2() {
-  const router = useRouter();
 
-  const handleButtonClick = () => {
-    router.push("/survey3");
-  };
   return (
     <>
       <div className="container">
-        <h2 className="title">당신은 한 달 뒤 중요한 전공 시험이 있어요.</h2>
+        <h2 className="title">
+          공부에 집중하려고 할 때, 당신은 어떻게 공부하나요?
+        </h2>
       </div>
       <div className="container">
-        <button className="btn1 btnContent1" onClick={handleButtonClick}>
-          한 달 전부터
+        <button className="btn1 btnContent1" onClick={() => handleNextPage(8)}>
+          PPT를 정독하며
           <br />
-          하루 1시간씩
+          N회독을 해요!
         </button>
-        <img className="image1" src="/img/Survey1.svg" />
-        <button className="btn2 btnContent2" onClick={handleButtonClick}>
-          일주일 전
+        <img className="image1" src="/img/Survey7.svg" />
+        <button className="btn2 btnContent2" onClick={() => handleNextPage(9)}>
+          직접 정리한
           <br />
-          하루 4시간씩
+          필기를 훑어요.
         </button>
-        <img className="image2" src="/img/Survey2.svg" />
+        <img className="image2" src="/img/Survey8.svg" />
       </div>
-
       <style jsx>{`
         .title {
           margin-top: 219px;
@@ -63,14 +55,13 @@ export default function Survey2() {
         }
         .image1 {
           position: absolute;
-          top: 260.3px;
-          left: 457.7px;
+          top: 306.64px;
+          left: 514.66px;
         }
         .image2 {
           position: absolute;
-          top: 10.26px;
-          right: 543.19px;
-          z-index: -1;
+          top: 301.11px;
+          right: 477.51px;
         }
       `}</style>
     </>
