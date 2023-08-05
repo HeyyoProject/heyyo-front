@@ -6,8 +6,6 @@ import SignupRightTab from "@/components/pages/signup/signup-right-tab/SignupRig
 export default function login() {
     return (
         <div>
-            <PageHead />
-            <NavBar />
             <LoginLeftTab />
             <SignupRightTab />
         </div>
