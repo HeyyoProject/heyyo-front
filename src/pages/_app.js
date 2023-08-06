@@ -8,8 +8,15 @@ export default function App({ Component, pageProps }) {
       <PageHead />
       <NavBar />
       <Component {...pageProps} />
+      <style jsx global>{`
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              text-align: center;
+              position: relative;
+            }
+        `}
+      </style>
       </>
   );
-
-
-}
