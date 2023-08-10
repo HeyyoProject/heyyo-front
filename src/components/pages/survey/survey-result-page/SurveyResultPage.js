@@ -1,22 +1,29 @@
 import React from "react";
-
-export default function SurveyResult6({ restartSurvey }) {
+export default function SurveyResult({
+  restartSurvey,
+  selectedData,
+  titleColor,
+  bgColor,
+  contentColor,
+}) {
   return (
     <>
       <div className="container">
         <h2 className="title">
           해요님은{" "}
-          <span style={{ fontSize: "50", color: "#1EAA39" }}>
-            &apos;북적&apos;
+          <span style={{ fontSize: "50", color: titleColor }}>
+            &apos;{selectedData.title}&apos;
           </span>{" "}
           타입이시군요!
         </h2>
       </div>
 
       <div className="container">
-        <img className="image" src="/img/Survey3.svg" />
-        <div className="bg">
-          <h1 className="bgContent">#왁자지껄#뮤직이즈_마이라이프</h1>
+        <img className="image" src={selectedData.img} />
+        <div className="bg" style={{ background: bgColor }}>
+          <h1 className="bgContent" style={{ color: contentColor }}>
+            {selectedData.hashtag}
+          </h1>
         </div>
       </div>
 
@@ -24,8 +31,10 @@ export default function SurveyResult6({ restartSurvey }) {
         <button className="btn btnContent">내 타입 그룹방 바로가기</button>
       </div>
 
-      <div className="container btn2">
-        <button onClick={restartSurvey}>테스트 다시하기</button>
+      <div className="container">
+        <button className="btn2" onClick={restartSurvey}>
+          테스트 다시하기
+        </button>
       </div>
 
       <style jsx>{`
@@ -40,7 +49,6 @@ export default function SurveyResult6({ restartSurvey }) {
           margin-top: 136px;
 
           border-radius: 37px;
-          background: #e1efd8;
         }
 
         .bgContent {
@@ -57,7 +65,6 @@ export default function SurveyResult6({ restartSurvey }) {
           width: 300px;
           height: 50px;
           margin-top: 76px;
-
           border-radius: 13px;
           background: #f2923b;
         }
@@ -72,9 +79,8 @@ export default function SurveyResult6({ restartSurvey }) {
         }
 
         .btn2 {
-          margin-top: 10px;
-
           color: #8c9499;
+          margin-top: 10px;
           text-align: center;
           font-size: 13px;
           font-style: normal;

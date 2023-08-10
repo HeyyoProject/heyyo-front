@@ -1,17 +1,21 @@
 import React from "react";
+import Image from "next/image";
 
-export default function Survey1({ handleNextPage }) {
+export default function SurveyStartPage({ handleNextPage }) {
   return (
     <>
       <div className="container">
-        <h2 className="title">
-          해요와 발자국을 함께 하시게 된 걸 축하해요!
-          <br />
-          당신은 이제 (경험하게 될 가치) 거예요.
-        </h2>
+        <h2 className="title">해요와 발자국을 함께 하시게 된 걸 축하해요!</h2>
       </div>
       <div className="container">
-        <img className="image" src="/img/Survey.svg" alt="asdasdasd" />
+        <div className="image">
+          <Image
+            src="/img/Survey.svg"
+            alt="surveyImg"
+            width={400}
+            height={350}
+          />
+        </div>
       </div>
       <div className="container">
         <button className="btn btnContent" onClick={() => handleNextPage(1)}>
