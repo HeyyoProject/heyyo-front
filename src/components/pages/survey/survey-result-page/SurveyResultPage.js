@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 export default function SurveyResult({
   restartSurvey,
   selectedData,
@@ -6,6 +7,11 @@ export default function SurveyResult({
   bgColor,
   contentColor,
 }) {
+  const imageStyle = {
+    position: "absolute",
+    top: selectedData.imgPosition?.top || 0,
+    left: selectedData.imgPosition?.left || 0,
+  };
   return (
     <>
       <div className="container">
@@ -19,7 +25,15 @@ export default function SurveyResult({
       </div>
 
       <div className="container">
-        <img className="image" src={selectedData.img} />
+        <div className="absolute">
+          <Image
+            alt="char"
+            src={selectedData.img}
+            width={selectedData.width}
+            height={selectedData.height}
+            style={imageStyle}
+          />
+        </div>
         <div className="bg" style={{ background: bgColor }}>
           <h1 className="bgContent" style={{ color: contentColor }}>
             {selectedData.hashtag}
@@ -88,13 +102,13 @@ export default function SurveyResult({
           line-height: normal;
         }
 
-        .image {
-          margin-top: 36px;
-          width: 541px;
-          height: 489.914px;
+        .absolute {
+          top: 100px;
+          //width: 541px;
+          //height: 489.914px;
 
           position: absolute;
-          left: 79px;
+          left: 200px;
         }
       `}</style>
     </>

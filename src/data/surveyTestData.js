@@ -1,4 +1,4 @@
-const surveyData = {
+const surveyTestData = {
   survey2: {
     id: 0,
     title: "당신은 한 달 뒤 중요한 전공 시험이 있어요",
@@ -89,4 +89,4 @@ const surveyData = {
   },
 };
 
-export default surveyData;
+export default surveyTestData;
