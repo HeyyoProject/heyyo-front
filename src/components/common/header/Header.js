@@ -21,9 +21,12 @@ export default function Header() {
     }
   }, []);
 
+  const ShowGroupStudyMenu =
+    router.pathname === "/groupstudylist" || router.pathname === "/groupstudy";
+
   // 로그인이 되어있을 때와 되어있지 않을 때의 링크 설정
   const homeLink = accessToken ? "/" : "/login";
-  const groupStudyLink = accessToken ? "/groupstudy" : "/login";
+  const groupStudyLink = accessToken ? "/groupstudylist" : "/login";
   const referenceRoomLink = accessToken ? "/referenceroom" : "/login";
   const myStudyRoomLink = accessToken ? "/mystudyroom" : "/login";
 
@@ -39,7 +42,7 @@ export default function Header() {
         </style.MenuLi>
         <style.MenuLi>
           <Link href={groupStudyLink} passHref>
-            <style.MenuAtag active={router.pathname === "/groupstudy"}>
+            <style.MenuAtag active={ShowGroupStudyMenu}>
               그룹 공부방
             </style.MenuAtag>
           </Link>

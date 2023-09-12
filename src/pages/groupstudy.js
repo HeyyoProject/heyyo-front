@@ -1,5 +1,5 @@
-import GroupStudyPageLayout from "@/components/pages/main/group-study-page/group-study-page-layout/GroupStudyPageLayout";
+import GroupStudyLayout from "@/components/pages/groupstudy/group-study-page/group-study-layout/GroupStudyLayout";
 
-export default function Groupstudy() {
-  return <GroupStudyPageLayout />;
+export default function groupstudy() {
+  return <GroupStudyLayout />;
 }
